@@ -27,7 +27,7 @@ class Board(pygame.sprite.Sprite):
             for j in range(1, 11):
                 x_loc = j * 40
                 y_loc = i * 40
-                new_Node = Node(x=x_loc, y=y_loc,ar_x=(i-1),ar_y=(j-1))
+                new_Node = Node(x=x_loc, y=y_loc,ar_y=(i-1),ar_x=(j-1))
                 self.surf.blit(new_Node.surf, (x_loc, y_loc))
                 self.nodes[i-1][j-1] = new_Node
                 # print(self.nodes)

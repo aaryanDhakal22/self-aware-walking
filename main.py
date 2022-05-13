@@ -14,11 +14,9 @@ screen = pygame.display.set_mode([SCREEN_WIDTH,SCREEN_HEIGHT])
 running  = True
 new_board = Board()
 new_board.fill_dots()
-print(new_board.nodes)
 
 
 player = Bot(new_board)
-player.move_up()
 
 while running:
 
