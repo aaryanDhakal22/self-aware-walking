@@ -1,6 +1,6 @@
 import pygame
 from board import Board
-from pygame.locals import K_ESCAPE,KEYDOWN
+from pygame.locals import K_ESCAPE, KEYDOWN
 from pprint import pprint
 from bot import Bot
 
@@ -9,15 +9,13 @@ pygame.init()
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
 
-screen = pygame.display.set_mode([SCREEN_WIDTH,SCREEN_HEIGHT])
+screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 
-running  = True
+running = True
 new_board = Board()
 new_board.fill_dots()
 
-
 player = Bot(new_board)
-
 while running:
 
     for event in pygame.event.get():
@@ -30,7 +28,7 @@ while running:
             if event.key == K_ESCAPE:
                 running = False
 
-    screen.blit(new_board.surf,(100,100))
+    screen.blit(new_board.surf, (100, 100))
     pygame.display.flip()
 
 
