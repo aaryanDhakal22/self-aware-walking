@@ -16,8 +16,8 @@ new_board = Board()
 new_board.fill_dots()
 
 player = Bot(new_board)
+player.gen_maze()
 while running:
-
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
